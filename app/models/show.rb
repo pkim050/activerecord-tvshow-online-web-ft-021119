@@ -20,7 +20,7 @@ class Show < ActiveRecord::Base
   end
 
   def Show::popular_shows
-    Show.order(:rating).last(2)
+    Show.order(rating: :asc).last(2)
   end
 
   def Show::shows_by_alphabetical_order
